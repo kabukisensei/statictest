@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Gallery | Nominal</title>
+    <meta name="description" content="Arrange images in a gallery">
+    <link href="/assets/css/reset.min.css" rel="stylesheet">    <link href="/assets/css/grid.min.css" rel="stylesheet">    <link href="/assets/css/properties.min.css" rel="stylesheet">          <link href="/assets/css/slider.min.css" rel="stylesheet">                                            <style>
+      :root {
+                          --color-secondary: #A1887F;
+                          --color-tertiary: #f0c674;
+                          --color-quaternary: cadetblue;
+                          --color-complementary: #82A2BD;
+                      }
+    </style>
+
+    <style type="text/css">
+  :root {
+    --font-family-body: "Roboto";
+    --font-family-heading: "Merriweather";
+  }
+</style>
+    <meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="Gallery"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/content/gallery" />
+<meta property="og:description" content="Arrange images in a gallery"/>
+  </head>
+
+  <body class="
+            uid-gallery    slug-gallery    templage-default    layout-narrow    subpages-layout-grid      ">
+
+    <a class="sr-only position-absolute top-1 left-1 bg-default z-index-2 padding-0.25" href="#gallery">Skip to main content</a>
+
+    <div class="section-navbar ">
+
+      
+      <nav class="border-bottom-1 margin-0">
+  <div class="container">
+    <ul class="list-unstyled padding-y-1 flex grow-0 align-center demi-small" style="--gap: 4px">
+
+      <!-- logo -->
+      <li>
+                  <a class="margin-right-0.5" href="/">
+                          <svg style="height: 40px; max-height: 40px; width: auto;" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><path d="M12 2l9 4.9V17L12 22l-9-4.9V7z"/></svg>
+                      </a>
+              </li>
+
+      <!-- title -->
+      <li>
+                  <a id="navbar-title" class="navbar-title color-inherit padding-0.5" href="/">Nominal</a>
+              </li>
+
+      <!-- toggle -->
+      <li class="display-none-lg width-max text-align-right">
+        <button data-action="toggle" data-target="navbar" class="border-0 padding-0.5 bg-transparent color-inherit" type="button">
+          <span class="sr-only">MENU</span>
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <g class="icon-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></g>
+            <g class="icon-close display-none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></g>
+          </svg>
+        </button>
+      </li>
+
+      <li data-id="navbar" data-component="dropdown" class="display-none width-12-xs width-min-lg display-inline-block-lg">
+        <ul class="list-unstyled flex align-center" style="--gap: 4px">
+                    <!-- pages -->
+                                                    <li class="width-12 width-min-lg">
+                                      <a class="display-block padding-0.5 color-inherit" href="/">
+                      Home                    </a>
+                                  </li>
+                                                        <li class="width-12 width-min-lg">
+                                      <a class="display-block padding-0.5 color-inherit" href="/features">
+                      Features                    </a>
+                                  </li>
+                                                        <li class="width-12 width-min-lg">
+                                      <div class="position-relative">
+                      <button data-action="toggle" class="display-block padding-0.5 text-align-initial border-0 bg-transparent color-inherit">
+                        Blog                        <svg aria-hidden="true" pointer-events="none" xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M 1,2 l 4,4 4,-4"></path></svg>
+                      </button>
+                      <ul data-component="dropdown" class="display-none list-unstyled position-absolute-lg padding-y-0.5 border-1-lg border-radius-0.2 box-shadow-lg margin-top-0.5 bg-default z-index-1 width-custom-lg" style="--width-lg: 19em;">
+                                                                          <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/list/article-1">
+                              <div class="text-decoration-underline-hover">
+                                Long guides are boring                              </div>
+                                                              <div class="color-muted small">
+                                  Get Kirby up and running in 1 minute                                </div>
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/list/article-2">
+                              <div class="text-decoration-underline-hover">
+                                Take a tour around the house                              </div>
+                                                              <div class="color-muted small">
+                                  We'll give you a quick look at every part of the house                                </div>
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/list/article-3">
+                              <div class="text-decoration-underline-hover">
+                                Start from scratch or from a full blown kit                              </div>
+                                                              <div class="color-muted small">
+                                  The way that fits you needs is perfect                                </div>
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/list/article-4">
+                              <div class="text-decoration-underline-hover">
+                                Design can have different connotations                              </div>
+                                                              <div class="color-muted small">
+                                  There are two basic meanings of design                                </div>
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/list/article-5">
+                              <div class="text-decoration-underline-hover">
+                                Design is intentional                              </div>
+                                                              <div class="color-muted small">
+                                  The construction of an object or system                                </div>
+                                                          </a>
+                          </li>
+                                                                                                  <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/list">
+                              View All                              <svg aria-hidden="true" class="icon color-inherit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+                            </a>
+                          </li>
+                                              </ul>
+                    </div>
+                                  </li>
+                                                        <li class="width-12 width-min-lg">
+                                      <div class="position-relative">
+                      <button data-action="toggle" class="display-block padding-0.5 text-align-initial border-0 bg-transparent color-inherit">
+                        Portfolio                        <svg aria-hidden="true" pointer-events="none" xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M 1,2 l 4,4 4,-4"></path></svg>
+                      </button>
+                      <ul data-component="dropdown" class="display-none list-unstyled position-absolute-lg padding-y-0.5 border-1-lg border-radius-0.2 box-shadow-lg margin-top-0.5 bg-default z-index-1 width-custom-lg" style="--width-lg: 19em;">
+                                                                          <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/grid/article-1">
+                              <div class="text-decoration-underline-hover">
+                                Long guides are boring                              </div>
+                                                              <div class="color-muted small">
+                                  Get Kirby up and running in 1 minute                                </div>
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/grid/article-2">
+                              <div class="text-decoration-underline-hover">
+                                Take a tour around the house                              </div>
+                                                              <div class="color-muted small">
+                                  We'll give you a quick look at every part of the house                                </div>
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/grid/article-3">
+                              <div class="text-decoration-underline-hover">
+                                Start from scratch or from a full blown kit                              </div>
+                                                              <div class="color-muted small">
+                                  The way that fits you needs is perfect                                </div>
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/grid/article-4">
+                              <div class="text-decoration-underline-hover">
+                                Design can have different connotations                              </div>
+                                                              <div class="color-muted small">
+                                  There are two basic meanings of design                                </div>
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/grid/article-5">
+                              <div class="text-decoration-underline-hover">
+                                Design is intentional                              </div>
+                                                              <div class="color-muted small">
+                                  The construction of an object or system                                </div>
+                                                          </a>
+                          </li>
+                                                                                                  <li>
+                            <a class="display-block padding-y-0.5 padding-x-1 text-decoration-0 bg-highlight-hover color-inherit" href="/layouts/grid">
+                              View All                              <svg aria-hidden="true" class="icon color-inherit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+                            </a>
+                          </li>
+                                              </ul>
+                    </div>
+                                  </li>
+                                                        <li class="width-12 width-min-lg">
+                                      <a class="display-block padding-0.5 color-inherit" href="/content/images">
+                      About                    </a>
+                                  </li>
+                                                        <li class="width-12 width-min-lg">
+                                      <a class="display-block padding-0.5 color-inherit" href="/forms/contact">
+                      Contact                    </a>
+                                  </li>
+                                    
+          <!-- languages -->
+          
+          <!-- external links -->
+                                    <li class="width-12 width-min-lg">
+                <a class="display-block padding-0.5 color-inherit" href="https://payhip.com/b/MDv7"  rel="noreferrer noopener nofollow">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="arcs"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg> Buy Now!                </a>
+              </li>
+                      
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    </div>
+
+<div class="section-content padding-y-2">
+  <div class="container">
+    <div class="flex gap-4 justify-center">
+      <main class="width-12 width-8-md">
+        <article class="margin-bottom-3">
+  <header class="">
+
+    <!-- title -->
+    <h1 class=" font-size-" id="gallery"><a class="color-inherit text-decoration-0" href="#gallery">Gallery</a></h1>
+
+    <!-- subtitle -->
+          <p class="font-size-h2 ">Arrange images in a gallery</p>
+    
+    <!-- metadata -->
+          <ul class="list-inline small margin-bottom-1 color-muted " style="--marker:'·'">
+        <!-- author -->
+                <!-- date -->
+                  <li><time datetime="2019-05-04">05/04/2019</time></li>
+                <!-- breadcrumb -->
+                  <li><a class="color-inherit" href="/content">Content</a></li>
+                <!-- tags -->
+              </ul>
+      </header>
+
+  <!-- thumbnail -->
+  
+  <!-- text -->
+      <div class="section-text margin-bottom-2">
+      <p>Digital photo books have digitally printed pages as opposed to albums that consist of traditional photos. Both flush mount albums as well as coffee table books are printed digitally. The photos of flush mount albums are printed on photographic paper, which is comparable to the quality of traditionally developed photos. Coffee table books, on the other hand, are printed with inkjet on ordinary paper and are therefore of a lower quality. Digital printing gives the album designer a vast number of design possibilities, for example magazine-style or montage albums are only possible with digital printing. Digital printing gives the album designer a vast number of design possibilities, for example magazine-style or montage albums are only possible with digital printing. The photos of flush mount albums are printed on photographic paper, which is comparable to the quality of traditionally developed photos.</p>
+<h2 id="gallery"><a class="color-inherit text-decoration-0" href="#gallery">Gallery</a></h2>
+<div><figure><div class="grid gap-1"><a class="width-4 cursor-zoom-in" href="#gallery-spacex-p-kcm6xb9i.jpg"><img alt="" class="display-block border-radius" src="/media/pages/content/gallery/3920997290-1630332939/spacex-p-kcm6xb9i-300x.jpg" title="Rocket launch"></a><a class="width-4 cursor-zoom-in" href="#gallery-cristina-gottardi-wvtgdigdojc.jpg"><img alt="" class="display-block border-radius" src="/media/pages/content/gallery/772992733-1630332939/cristina-gottardi-wvtgdigdojc-300x.jpg" title="Planare sulle cose dall’alto"></a><a class="width-4 cursor-zoom-in" href="#gallery-so60uagctu.jpg"><img alt="" class="display-block border-radius" src="/media/pages/content/gallery/3733268405-1630332939/so60uagctu-300x.jpg" title="Tulips standing at attention"></a><a class="width-4 cursor-zoom-in" href="#gallery-0bpdwl4su0u.jpg"><img alt="" class="display-block border-radius" src="/media/pages/content/gallery/3640388106-1630332939/0bpdwl4su0u-300x.jpg" title="Sunset at Firenze Italy"></a><a class="width-4 cursor-zoom-in" href="#gallery-pdcqx39zazg.jpg"><img alt="" class="display-block border-radius" src="/media/pages/content/gallery/1696664179-1630332939/pdcqx39zazg-300x.jpg" title="Log burning"></a><a class="width-4 cursor-zoom-in" href="#gallery-hphxtt_auuw.jpg"><img alt="" class="display-block border-radius" src="/media/pages/content/gallery/2437392697-1630332939/hphxtt-auuw-300x.jpg" title="Busy bee in a flower"></a><a class="width-4 cursor-zoom-in" href="#gallery-nasa-q1p7bh3shj8.jpg"><img alt="" class="display-block border-radius" src="/media/pages/content/gallery/2573997647-1630332939/nasa-q1p7bh3shj8-300x.jpg" title="Space view of planet Earth at night"></a><a class="width-4 cursor-zoom-in" href="#gallery-vincentiu-solomon-ln5drpv_imi.jpg"><img alt="" class="display-block border-radius" src="/media/pages/content/gallery/2724616337-1630332939/vincentiu-solomon-ln5drpv-imi-300x.jpg" title="Sublime purple night sky"></a><a class="width-4 cursor-zoom-in" href="#gallery-claudio-testa-frlcwxwbwkk-unsplash.jpg"><img alt="" class="display-block border-radius" src="/media/pages/content/gallery/1778827632-1630332939/claudio-testa-frlcwxwbwkk-unsplash-300x.jpg" title="Close up photo of green linear leaves"></a></div><figcaption class="text-align-center">Gallery of images in a grid with lightbox effect</figcaption></figure><figure class="lightbox z-index-2" id="gallery-spacex-p-kcm6xb9i.jpg"><img alt="" loading="lazy" src="/media/pages/content/gallery/3920997290-1630332939/spacex-p-kcm6xb9i.jpg" title="Rocket launch"><figcaption><div class="font-weight-600">Rocket launch</div><div>Photo by SpaceX on Unsplash</div></figcaption></figure><figure class="lightbox z-index-2" id="gallery-cristina-gottardi-wvtgdigdojc.jpg"><img alt="" loading="lazy" src="/media/pages/content/gallery/772992733-1630332939/cristina-gottardi-wvtgdigdojc.jpg" title="Planare sulle cose dall’alto"><figcaption><div class="font-weight-600">Planare sulle cose dall’alto</div><div>Phot by Cristina Gottardi on Unsplash</div></figcaption></figure><figure class="lightbox z-index-2" id="gallery-so60uagctu.jpg"><img alt="" loading="lazy" src="/media/pages/content/gallery/3733268405-1630332939/so60uagctu.jpg" title="Tulips standing at attention"><figcaption><div class="font-weight-600">Tulips standing at attention</div><div>Photo by Leigh Kendell on Unsplash</div></figcaption></figure><figure class="lightbox z-index-2" id="gallery-0bpdwl4su0u.jpg"><img alt="" loading="lazy" src="/media/pages/content/gallery/3640388106-1630332939/0bpdwl4su0u.jpg" title="Sunset at Firenze Italy"><figcaption><div class="font-weight-600">Sunset at Firenze Italy</div><div>Photo by Matteo Vistocco on Unsplash</div></figcaption></figure><figure class="lightbox z-index-2" id="gallery-pdcqx39zazg.jpg"><img alt="" loading="lazy" src="/media/pages/content/gallery/1696664179-1630332939/pdcqx39zazg.jpg" title="Log burning"><figcaption><div class="font-weight-600">Log burning</div><div>Photo by Obed Hernández on Unsplash</div></figcaption></figure><figure class="lightbox z-index-2" id="gallery-hphxtt_auuw.jpg"><img alt="" loading="lazy" src="/media/pages/content/gallery/2437392697-1630332939/hphxtt_auuw.jpg" title="Busy bee in a flower"><figcaption><div class="font-weight-600">Busy bee in a flower</div><div>Photo by Diana Măceşanu on Unsplash</div></figcaption></figure><figure class="lightbox z-index-2" id="gallery-nasa-q1p7bh3shj8.jpg"><img alt="" loading="lazy" src="/media/pages/content/gallery/2573997647-1630332939/nasa-q1p7bh3shj8.jpg" title="Space view of planet Earth at night"><figcaption><div class="font-weight-600">Space view of planet Earth at night</div><div>Photo by NASA on Unsplash</div></figcaption></figure><figure class="lightbox z-index-2" id="gallery-vincentiu-solomon-ln5drpv_imi.jpg"><img alt="" loading="lazy" src="/media/pages/content/gallery/2724616337-1630332939/vincentiu-solomon-ln5drpv_imi.jpg" title="Sublime purple night sky"><figcaption><div class="font-weight-600">Sublime purple night sky</div><div>Photo by Vincentiu Solomon on Unsplash</div></figcaption></figure><figure class="lightbox z-index-2" id="gallery-claudio-testa-frlcwxwbwkk-unsplash.jpg"><img alt="" loading="lazy" src="/media/pages/content/gallery/1778827632-1630332939/claudio-testa-frlcwxwbwkk-unsplash.jpg" title="Close up photo of green linear leaves"><figcaption><div class="font-weight-600">Close up photo of green linear leaves</div><div>Photo by Claudio Tesla on Unsplash</div></figcaption></figure><a class="lightbox-close z-index-3" href="#!"><span class="sr-only">Close</span><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></a></div>
+<p>Digital photo books are increasingly popular because they allow anyone with a digital camera to create coffee table books of their photos. Also, it is often considered easier to print photos onto pages directly, rather than position and secure individual prints onto the pages of a traditional album. Aesthetically, digital photo books seem neater and more professional than albums. This has led to their growing popularity amongst both professional and amateur photographers. Digital photo book printing companies have used the internet to make designing and producing photo books very easy for the general consumer.</p>    </div>
+  
+  <!-- author bio -->
+  
+  <!-- page navigation -->
+  
+</article>
+                
+              </main><!--/main-->
+          </div><!--/.row-->
+  </div><!--/.container-->
+</div><!-- /.section-content -->
+
+
+    
+    
+
+          <section class="padding-y-5 border-top-1">
+        <div class="container" style="max-width: 800px;">
+          
+  <section class="padding-2">
+    <h2 class="font-size-h6">Subscribe</h2>
+          <p>Get the latest news in your inbox. Subscribe to our newsletter and be the first to know about new content.</p>        <form class="flex gap-1" action="https://heyallan.us6.list-manage.com/subscribe/post?u=ccd5fffb9e&id=6f24c9fc9f" method="post" target="_blank">
+      <div class="width-content grow-2 margin-0">
+        <label class="sr-only" for="email">Email</label>
+        <input class="display-block" id="email" type="email" name="EMAIL" placeholder="email@example.com" required>
+      </div>
+      <div class="width-content grow-1 margin-0">
+        <button class="display-block bg-primary" type="submit">Subscribe</button>
+      </div>
+    </form>
+  </section>
+        </div>
+      </section>
+    
+
+          <footer>
+                  <div class="padding-y-3 small border-top-1">
+            <div class="container">
+              <div class="flex gap-1 " style="" markdown="1">
+<div class="width-auto " style="--min-width: 250px " markdown="1">
+<p><strong>Column</strong></p>
+<p>A column is a vertical division of a page or text, a vertical arrangement of figures or other information, a section of a newspaper or magazine regularly devoted to a particular subject.</p>
+</div>
+<div class="width-auto " style="--min-width: 250px " markdown="1">
+<p><strong>Column</strong></p>
+<p>A column is a vertical division of a page or text, a vertical arrangement of figures or other information, a section of a newspaper or magazine regularly devoted to a particular subject.</p>
+</div>
+<div class="width-auto " style="--min-width: 250px " markdown="1">
+<p><strong>Column</strong></p>
+<p>A column is a vertical division of a page or text, a vertical arrangement of figures or other information, a section of a newspaper or magazine regularly devoted to a particular subject.</p>
+</div>
+</div>            </div>
+          </div>
+                          <div class="padding-y-2 small border-top-1">
+            <div class="container">
+              <div class="text-align-center" style="" markdown="1">
+<a href="#!">Instagram</a> · <a href="#!">Twitter</a> · <a href="/contact">Contact</a> · <a href="#!">Privacy</a> · <a href="#!">Terms</a>
+</div>
+<div class="text-align-center" style="" markdown="1">
+Copyright. All Rights Reserved.
+</div>            </div>
+          </div>
+              </footer>
+    
+    
+    <script>
+      /* polyfill - closest() */
+      /* ----- ----- ----- ----- */
+      if (!Element.prototype.matches) { Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector }
+      if (!Element.prototype.closest) {
+        Element.prototype.closest = function(selector) {
+          var element = this;
+          do { if (element.matches(selector)) return element ; element = element.parentElement || element.parentNode }
+          while (element !== null && element.nodeType === 1);
+          return null;
+        }
+      }
+    </script>
+
+    <!-- popup component -->
+          <div data-component="popup-container" class="position-fixed overflow-y top-0 right-0 padding-1" style="width: 350px; height: 100%; max-width: 100vw; z-index: 200;">
+                  <div id="popupItem1" data-component="popup" class="small padding-1.5 border-1 border-radius bg-default box-shadow margin-bottom-1">
+            <p class="margin-bottom-0.5"><strong>🤖 Privacy Policy</strong></p>
+            <p>We use cookies to improve your experience. Find out more in our <a href="/privacy">privacy</a> page and <a href="/docs/popups">documentation</a> page.</p>                                    <button class="bg-primary small" type="button" data-action="dismiss">Dismiss</button>
+          </div>
+                  <div id="popupItem2" data-component="popup" class="small padding-1.5 border-1 border-radius bg-default box-shadow margin-bottom-1">
+            <p class="margin-bottom-0.5"><strong>👾 Popup With Options</strong></p>
+            <p>Popup can have up to 3 buttons you can use to save user preferences. To learn more visit <a href="/docs/popups">documentation</a> page.</p>                          <button class="bg-primary small" type="button" data-action="accept">Accept</button>
+                                      <button class="bg-primary small" type="button" data-action="decline">Decline</button>
+                        <button class="bg-primary small" type="button" data-action="dismiss">Dismiss</button>
+          </div>
+              </div>
+      <script>
+        /* cookies - helper functions */
+        /* ----- ----- ----- ----- */
+        function setCookie(key, value, days) {
+          if (value === undefined) return;
+          var data = key + '=' + value + '; ';
+          var expiration;
+          if (days === undefined) expiration = '';
+          else {
+            var date = new Date(); date.setTime(date.getTime() + (days*24*60*60*1000));
+            var relativeDate = date.toUTCString();
+            expiration = 'expires=' + relativeDate + '; '
+          }
+          document.cookie = data + expiration + 'path=/; ';
+        }
+        function getCookie(key) {
+          if (key === undefined) return document.cookie;
+          var cookies = '; ' + document.cookie;
+          var data = cookies.split('; ' + key + '=');
+          if (data.length === 2) return data.pop().split(';').shift();
+        }
+        function removeCookie(key) {
+          setCookie(key, '', 0)
+        }
+        /* popups */
+        /* ----- ----- ----- ----- */
+        (function() {
+          /* popup definition */
+          /* ----- ----- ----- ----- */
+          var popupContainer = document.querySelector('[data-component="popup-container"]');
+          var popupCollection = document.querySelectorAll('[data-component="popup"]');
+          var bezierTransition = 'all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+          /* helper functions */
+          /* ----- ----- ----- ----- */
+          function animateShow(element) {
+            element.style.transition = '';
+            element.style.marginTop = '-' + element.scrollHeight + 'px';
+            element.style.opacity = 0;
+            window.setTimeout(function() {
+              element.style.transition = bezierTransition;
+              element.style.transitionProperty = 'margin-top, margin-bottom, opacity';
+              element.style.marginTop = 0;
+              element.style.opacity = 1;
+            }, 2000);
+          }
+          function animateHide(element) {
+            element.style.transition = bezierTransition;
+            element.style.transitionProperty = 'margin-top, margin-bottom, opacity';
+            element.style.marginTop = 0;
+            element.style.marginTop = '-' + element.scrollHeight + 'px';
+            element.style.marginBottom = 0;
+            element.style.opacity = 0;
+            element.addEventListener('transitionend', function() {
+              element.style.display = 'none';
+              if (activePopups() === 0) popupContainer.style.display = 'none';
+            });
+          }
+          function activePopups() {
+            var count = 0;
+            for (var i = 0; i < popupCollection.length; i++) {
+              if (getCookie(popupCollection[i].id) === undefined) count += 1;
+            }
+            return count;
+          }
+          /* popup startup */
+          /* ----- ----- ----- ----- */
+          if (popupCollection.length) {
+            for (var i = 0; i < popupCollection.length; i++) {
+              var popup = popupCollection[i];
+              popup.style.transition = bezierTransition;
+              popup.style.transitionProperty = 'margin-top, margin-bottom, opacity';
+              popup.style.position = 'relative';
+              if (getCookie(popup.id) !== undefined) {
+                popup.style.display = 'none';
+              }
+            }
+            if (activePopups() > 0) {
+              animateShow(popupContainer);
+            } else {
+              popupContainer.style.display = 'none';
+            }
+          }
+          /* popup dismiss type */
+          /* ----- ----- ----- ----- */
+          document.addEventListener('click', function(event) {
+            var button = event.target;
+            var action = button.dataset.action;
+            var popup = button.closest('[data-component="popup"]');
+            if (action === 'accept' && popup !== null) {
+              animateHide(popup);
+              setCookie(popup.id, 'true');
+            }
+            else if (action === 'decline' && popup !== null) {
+              animateHide(popup);
+              setCookie(popup.id, 'false');
+            }
+            else if (action === 'dismiss' && popup !== null) {
+              animateHide(popup);
+              setCookie(popup.id, 'dismiss');
+            }
+            else if (action === 'popup-reset-all') {
+              for (var i = 0; i < popupCollection.length; i++) {
+                removeCookie(popupCollection[i].id)
+              }
+              window.location.reload(false);
+            }
+          })
+        })();
+      </script>
+    
+    <script>
+      /* dropdown */
+      /* ------ ------ ------ ------ */
+      (function() {
+        var toggleButtonSelector = '[data-action="toggle"]';
+        var toggleButtonAll = Array.prototype.slice.call(document.querySelectorAll(toggleButtonSelector));
+        if (!toggleButtonAll) return;
+        document.addEventListener('click', function(event) {
+          var eventTarget = event.target.closest(toggleButtonSelector);
+          toggleButtonAll.forEach(function(item) {
+            var buttonHasExternalSubmenu = item.dataset.target;
+            var buttonIsCurrent = item === eventTarget;
+            var submenu = document.querySelector('[data-id="' + item.dataset.target + '"]') || item.nextElementSibling;
+            if (buttonIsCurrent) {
+              submenu.classList.toggle('display-none');
+            }
+            else if (!buttonHasExternalSubmenu) {
+              submenu.classList.add('display-none');
+            }
+          })
+        })
+      })()
+    </script>
+
+    <script>
+      /* sticky navbar */
+      /* ----- ----- ----- ----- */
+      (function() {
+        var stickyNavbar = document.querySelector('.section-navbar.is-sticky');
+        var fixateNavbar;
+        if (stickyNavbar) {
+          var mediaQueryLg = window.matchMedia('(min-width: 57em)');
+          function handleStickyNavbar(event) {
+            var offsetTop = stickyNavbar.offsetTop;
+            var navbarHeight = stickyNavbar.offsetHeight;
+            var fixedClassList = ['position-fixed', 'top-0', 'width-100', 'bg-default', 'z-index-1'];
+            fixateNavbar = function() {
+              if (event.matches && window.pageYOffset >= offsetTop) {
+                stickyNavbar.classList.add.apply(stickyNavbar.classList, fixedClassList);
+                document.body.style.marginTop = navbarHeight + 'px';
+              } else {
+                stickyNavbar.classList.remove.apply(stickyNavbar.classList, fixedClassList);
+                document.body.style.marginTop = '';
+              }
+            }
+            fixateNavbar();
+            window.addEventListener('scroll', fixateNavbar);
+          }
+          handleStickyNavbar(mediaQueryLg);
+          mediaQueryLg.addListener(handleStickyNavbar);
+        }
+      })()
+    </script>
+
+    <!-- privacy friendly analytics -->
+<script async src="https://cdn.panelbear.com/analytics.js?site=DO71s1V5ATg"></script>
+<script>
+  window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
+  panelbear('config', { site: 'DO71s1V5ATg' });
+  window.addEventListener('click', function(event) {
+    if (!event.target.matches('[href="https://payhip.com/b/MDv7"]')) return;
+    panelbear('track', 'LinkBuyNow');
+  });
+</script>
+<script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+      </body>
+</html>
